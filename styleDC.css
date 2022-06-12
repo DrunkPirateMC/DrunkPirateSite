@@ -1,0 +1,581 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;500&display=swap');
+body::-webkit-scrollbar{
+    display: none;
+}
+html{
+    scrollbar-width: none;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes fadeInLoader {
+    0% { opacity: 1; }
+    100% { opacity: 1; }
+}
+.loader {
+    position : fixed;
+    z-index: 9999;
+    background : url('image/loading.png') 50% 50% no-repeat;
+    background-color: #000000;
+    image-rendering: pixelated;
+    top : 0px;
+    left : 0px;
+    height : 100%;
+    width : 100%;
+    cursor : wait;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+/* ===================================================================The navigation bar=================================================================== */
+.navbar {
+    overflow: hidden;
+    background-color: rgb(29, 29, 29);
+    position: sticky; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height: 75px;
+    line-height: 70px;
+    vertical-align: middle;
+    z-index: 10;
+    border-bottom: solid 2px #daa520;
+}
+.Logo{
+    float: left;
+    display: block;
+    width: 120px;
+    height: auto;
+    position: relative;
+}
+.container{
+    position: absolute; /* postulat de départ */
+    top: 50%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
+}
+  /* Links inside the navbar */
+.navbar a {
+    font-family: 'Prompt', sans-serif;
+    font-size: 1em;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    padding-left: 10px;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.button {
+    float: right;
+    display: block;
+    width: 190px;
+    height: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 7px;
+    margin-bottom: 5px;
+    image-rendering: pixelated;
+    background-image: url("image/button.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.button:hover{
+    background-image: url("image/buttonhover.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+@media (max-width: 700px) {
+    .navbar a {
+        display: none;
+    }
+    .navbar a:hover {
+        color: #eeb704;
+    }
+}
+.navbar a:hover {
+    color: rgb(238, 183, 4);
+    font-size: 1.2em;
+}
+
+/*footer*/
+.footer {
+    overflow: hidden;
+    background-color: rgb(29, 29, 29);
+    position: sticky; /* Set the navbar to fixed position */
+    bottom: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    height: 65px;
+    z-index: 10;
+    border-top: solid 2px #daa520;
+}
+.containerFooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-top: 7px;
+  }
+  img.Twitter{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 50px;
+    height: 55px;
+    margin-right: 1%;
+    image-rendering: pixelated;
+  }
+  
+  img.Discord{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 50px;
+    height: 55px;
+    margin-left: 1%;
+    image-rendering: pixelated;
+  }  
+/* ===================================================================herobanner=================================================================== */  
+.background{
+    width: 100%;
+    height: auto;
+    z-index: 8;
+    position: relative;
+    image-rendering: pixelated;
+}
+.mainlogo{
+    z-index: 9;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    image-rendering: pixelated;    
+}
+@media (max-width: 800px) {
+    .mainlogo {
+        margin-top: 18%;
+    }
+}
+.mainlogo{
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+}
+.NFT{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: normal;
+    align-items: center;
+    align-content: center;
+    background-image: url("image/NFT.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin: 0;   
+}
+@media (max-width: 800px) {
+    .NFT {
+      flex-direction: column;  
+    }
+    .NFT p.NFTTEXT{
+        flex: 100%;
+        width: 100%;
+    }
+    .NFT img.NFTGIF{
+        flex: 100%;
+        width: 90%;
+    }
+}
+.NFT p.NFTText{
+    font-family: 'Prompt', sans-serif;
+    font-size: 2em;
+    text-shadow: 1px 1px 20px rgba(0,0,0,1);
+    color: #f2f2f2;
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: 50%;
+    align-self: auto;
+    order: 0;
+    padding-left: 10%;
+    padding-right: 5%;   
+    background-color: #0000006c;
+}
+.NFTGIF{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    height: auto;
+    text-align: center;
+    box-shadow: 0px 0px 44px 28px #000000;
+    width: 25%;
+    position: relative;
+}
+
+  .Marquee-box {
+     position: relative;
+     display: inline-block;
+     width: 100%;
+     height: 45px;
+     background: url("image/marqueebg.png") 0% 0% repeat-x;
+     background-size: contain;
+  }
+  .MyMarquee {
+     text-align: center;
+     width: 100%;
+     height: 100%;
+     font-size: 28px;
+     color: #eeb704;
+     font-family: 'Prompt', sans-serif;
+     vertical-align: middle;
+     -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     padding-top: 0px;
+  }
+  .MyMarquee div {
+     display: inline-block;
+     vertical-align: middle;
+  }
+  .MyMarquee a, .MyMarquee img {
+     display: inline-block;
+     text-decoration: none;
+     color: #FFFFFF;
+     vertical-align: middle;
+  }
+
+
+.wju{
+    font-family: 'Prompt', sans-serif;
+    font-size: 4em;
+    color: #eeb704;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.JOIN {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 80%;
+    height: auto;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+@media (max-width: 800px) {
+    .JOIN {
+      flex-direction: column;  
+      padding-top: 2%;
+
+      
+    }
+    img.HELP{
+        flex: 100%;
+        width: 100%;   
+        image-rendering: pixelated;
+    }
+    img.SCHOLARSHIP{
+        flex: 100%;
+        width: 100%;
+        image-rendering: pixelated;  
+    }
+    img.RESTRICTION{
+        flex: 100%;
+        width: 100%;  
+        image-rendering: pixelated;
+    }
+}
+.HELP{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 33%;
+    image-rendering: pixelated;
+
+  }
+.SCHOLARSHIP {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 33%;
+    image-rendering: pixelated;
+
+}
+.RESTRICTION {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 33%;
+    image-rendering: pixelated;
+}
+
+
+
+.RoadMap{
+    font-family: 'Prompt', sans-serif;
+    font-size: 4em;
+    color: #eeb704;
+    text-align: center;
+    padding-top: 1%;
+}
+.roadmapbackground{
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+/* TEAM */
+
+.TEAM{
+    font-family: 'Prompt', sans-serif;
+    font-size: 4em;
+    color: #eeb704;
+    text-align: center;
+    padding-top: 5%;
+}
+
+.staff {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+  }
+  @media (max-width: 800px) {
+    .staff {
+      flex-direction: column;  
+      padding-top: 2%;
+
+      
+    }
+    img.Ychie{
+        flex: 100%;
+        width: 100%;   
+        image-rendering: pixelated;
+    }
+    img.MaxiBretzel{
+        flex: 100%;
+        width: 100%;
+        image-rendering: pixelated;  
+    }
+    img.The__V{
+        flex: 100%;
+        width: 100%;  
+        image-rendering: pixelated;
+    }
+    img.Hiikaru{
+        flex: 100%;
+        width: 100%;  
+        image-rendering: pixelated;
+    }
+    img.AntWhite{
+        flex: 100%;
+        width: 100%;  
+        image-rendering: pixelated;
+    }
+    img.Raijin{
+        flex: 100%;
+        width: 100%;  
+        image-rendering: pixelated;
+    }
+}
+  .Ychie{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 25%;
+    margin: 2%;
+  }
+  
+  .MaxiBretzel{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 25%;
+    margin: 2%;
+  }
+  
+  .The__V{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 25%;
+    margin: 2%;
+  }
+  
+  .Hiikaru{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 25%;
+    margin: 2%;
+  }
+  
+  .AntWhite{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 25%;
+    margin: 2%;
+  }
+  
+  .Raijin{
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    width: 25%;
+    margin: 2%;
+  }
+
+
+
+
+  
+  .faq-header{
+    font-size: 42px;
+    border-bottom: solid 1px #ccc;
+    padding: 24px;
+    color: #daa520;
+    font-family: 'Prompt', sans-serif;
+    text-align: center;
+    
+  }
+  
+  .faq-content {
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Prompt', sans-serif;
+    color: #daa520;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  
+  .faq-question {
+    padding: 40px 0;
+    border-bottom: solid 1px #ccc;
+  }
+  
+  .panel-title {
+    font-size: 24px;
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 10px 10px 0 48px;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .panel-content {
+    font-size: 20px;
+    padding: 0px 14px;
+    margin: 0 40px;
+    height: 0;
+    overflow: hidden;
+    z-index: -1;
+    position: relative;
+    opacity: 0;
+    -webkit-transition: .4s ease;
+    -moz-transition: .4s ease;
+    -o-transition: .4s ease;
+    transition: .4s ease;
+  }
+  
+  .panel:checked ~ .panel-content{
+    height: auto;
+    opacity: 1;
+    padding: 14px;
+  }
+  
+  .plus {
+
+    position: absolute;
+    margin-left: 20px;
+    margin-top: 4px;
+    z-index: 5;
+    font-size: 35px;
+    line-height: 100%;
+    -webkit-user-select: none;    
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    -webkit-transition: .2s ease;
+    -moz-transition: .2s ease;
+    -o-transition: .2s ease;
+    transition: .2s ease;
+  }
+  
+  .panel:checked ~ .plus {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .panel {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    .panel-title {
+        font-size: 0.8em;
+    }
+    .panel-content{
+        font-size: 0.8em;
+    }
+}
