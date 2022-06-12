@@ -9,23 +9,6 @@ html{
     0% { opacity: 0; }
     100% { opacity: 1; }
 }
-@keyframes fadeInLoader {
-    0% { opacity: 1; }
-    100% { opacity: 1; }
-}
-.loader {
-    position : fixed;
-    z-index: 9999;
-    background : url('image/loading.png') 50% 50% no-repeat;
-    background-color: #000000;
-    image-rendering: pixelated;
-    top : 0px;
-    left : 0px;
-    height : 100%;
-    width : 100%;
-    cursor : wait;
-}
-
 body{
     margin: 0;
     padding: 0;
